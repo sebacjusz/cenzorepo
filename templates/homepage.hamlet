@@ -1,0 +1,6 @@
+<h1> Papież tańczy xD xD xD
+<a href=@{UploadR}> dodawacz nowy
+<h1> xD
+<form method=get action=@{TagListR} enctype=#{enctype}>
+    ^{sform}
+^{filesWidget}

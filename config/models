@@ -1,0 +1,21 @@
+User
+    ident Text
+    password Text Maybe
+    UniqueUser ident
+    deriving Typeable
+
+File
+    title Text
+    hash Hash
+    extension String
+    mime ByteString
+    time UTCTime
+    size Int
+    UniqueHash hash
+
+Tag
+    name Text
+    fileId FileId Eq
+    UniqueTag name fileId
+
+ -- By default this file is used in Model.hs (which is imported by Foundation.hs)

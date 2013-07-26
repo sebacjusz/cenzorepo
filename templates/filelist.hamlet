@@ -1,0 +1,14 @@
+$if null files
+    <h1> ;_;
+$else
+    <dl>
+    $forall (file, tags) <- files
+        <dt> #{fileTitle file} <br>
+            ^{ audioPlayer (fileHash file) }
+        <dd style="border-bottom: 1px solid #000">
+            #{showFileSize (fileSize file)}
+            <a href=@{FileR (fileHash file)}> dej
+            <br>
+            tagi:
+            $forall t <- tags
+                <a href="@{TagR (tagName t)}"> #{tagName t}

@@ -1,0 +1,20 @@
+Default: &defaults
+  database: cenzorepo.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: cenzorepo_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: cenzorepo_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: cenzorepo_production.sqlite3
+  poolsize: 100
+  <<: *defaults
